@@ -1,1 +1,35 @@
+package chap03;
+
+public class Dog {
+    String name;
+    public static void main(String[] args) {
+        Dog dog1 = new Dog();
+        dog1.bark();
+        dog1.name = "검둥개";
+        
+        Dog[] myDogs = new Dog[3];
+        myDogs[0] = new Dog();
+        myDogs[1] = new Dog();
+        myDogs[2] = dog1;
+        
+        myDogs[0].name = "인절미";
+        myDogs[1].name = "바둑이";
+        
+        System.out.print("last don't name is ");
+        System.out.println(myDogs[2].name);
+        
+        int x = 0;
+        while (x < myDogs.length) {
+            myDogs[x].bark();
+            x = x+1;
+        }
+    }
+    public void bark() {
+        System.out.println(name + "가 컹컹 짖습니다!");
+    }
+    
+    public void eat() { }
+    
+    public void chaseCat() { }
+}
 
